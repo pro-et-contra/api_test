@@ -1,0 +1,30 @@
+{
+  "name": "tst-api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "setup": "npm install && sleep 20 && ./node_modules/.bin/knex migrate:latest --env development && ./node_modules/.bin/knex seed:run --env development && node ./src/server/index.js",
+    "start": "node ./src/server/index.js",
+    "test": "./node_modules/.bin/_mocha"
+  },
+  "keywords": [],
+  "author": "Volodymyr Kunytskiy",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.1.1",
+    "chai-http": "^3.0.0",
+    "mocha": "3.5.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "knex": "^0.13.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-passport": "^4.1.0",
+    "koa-router": "^7.2.1",
+    "koa-session": "^5.8.2",
+    "passport-local": "^1.0.0",
+    "pg": "^7.1.2",
+    "sinon": "^6.1.5"
+  }
+}
